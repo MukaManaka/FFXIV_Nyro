@@ -253,9 +253,7 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-            </Condition>
+            <Condition Enabled="false" Grouping="Or" />
           </Trigger>
           <Trigger Enabled="false" Name="提拉纳" Id="6f03b44f-4346-4b82-b3c5-beb221931711" RegularExpression="^.{14} AOEActionEffect 16:.+?:.+?:.+?:提拉纳:">
             <Actions>
@@ -269,9 +267,7 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-            </Condition>
+            <Condition Enabled="false" Grouping="Or" />
           </Trigger>
           <Trigger Enabled="true" Name="舞步施放捕捉" Id="e616a17a-55aa-47af-964d-eb8f2158fe9f" RegularExpression="^.{14} ActionEffect 15:.+?:(?&lt;name&gt;.+?):.+?:(?&lt;sname&gt;(蔷薇曲脚步|小鸟交叠跳|绿叶小踢腿|金冠趾尖转)):">
             <Actions>
@@ -412,7 +408,7 @@
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Name="技能施法准备（拖进快捷栏）" Id="658eb0bc-9b44-4fbd-906f-7f58906bbcd4" RegularExpression="^nyro_skill_ready:(?&lt;name&gt;.*?):">
+      <Trigger Enabled="true" Name="技能施法准备" Id="658eb0bc-9b44-4fbd-906f-7f58906bbcd4" RegularExpression="^nyro_skill_ready:(?&lt;name&gt;.*?):">
         <Actions>
           <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/hotbar set ${name} ${var:nyro_dc_舞步_热键栏位置} ${var:nyro_dc_舞步_热键栏序号}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
             <Condition Enabled="false" Grouping="Or" />
@@ -428,13 +424,13 @@
           <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="热键栏1" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" VariableOp="SetString" VariableName="nyro_dc_舞步_热键栏位置" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+          <Action OrderNumber="3" VariableOp="SetString" VariableName="nyro_dc_舞步_热键栏位置" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
           <Action OrderNumber="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="热键栏x 的第1个按键" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" VariableOp="SetString" VariableName="nyro_dc_舞步_热键栏序号" VariableExpression="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+          <Action OrderNumber="5" VariableOp="SetString" VariableName="nyro_dc_舞步_热键栏序号" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
